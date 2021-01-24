@@ -192,3 +192,12 @@ zabbix-server.service - Zabbix Server
 lines 1-22
 ```
 
+Referência do Zabbix com Selinux:
+link: https://www.systutorials.com/docs/linux/man/8-zabbix_selinux/
+
+Comandos para permitir que o Selinux mantenha o Zabbix e apache rodando
+
+``` 
+sudo setsebool -P httpd_can_connect_zabbix on
+sudo sesebool -P daemons_enable_cluster_mode on
+```
